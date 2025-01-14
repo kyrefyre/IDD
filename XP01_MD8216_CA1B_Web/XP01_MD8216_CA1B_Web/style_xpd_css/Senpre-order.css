@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+    font-family: 'Satoshi', sans-serif;/*Font family used for this page*/
+    color: #303030 ;/*The colour of all the text in the pre-order page*/
+    background-size: 1920px;/*The size of the gradient background*/
+    background-position: top center;/*Alignmnet of the background in the page*/
+    background-repeat: no-repeat;/*Background only shows up once*/
+    background-image: linear-gradient(#DCC7B3, #766B60);/*The colour of our background*/
+    display: flex;/*Creates a flex container, making elements easier to align*/
+    flex-direction: column;/*Alignment of the elements in the page, like the navigation bar, form, and the image*/
+    justify-content: center;/*Horizontally Centers all the content inside the flex container*/
+    align-items: center;/*Vertically aligns all items to the center*/
+    overflow-x: hidden;/*This prevents the page from mving to the right, if the elements are bigger then the screen itself*/
+    margin: 0; /*Ensures that the footer fills the whole page*/
+    padding: 0; /*Ensures that the footer fills the whole page*/
+    box-sizing: border-box; /* Ensures consistent box-sizing across the page */
+}
+
+/*Top logo section*/
+.header {
+    display: flex ; /*Container to hold the Logo image*/
+    align-items: center; /*Aligns the flex container to the center*/
+    margin: auto; /*Margin for the flex container*/
+    padding: 16px; /*Padding for the flex container*/
+}
+
+header div img {
+    width: 160px; /*Logo image width*/
+    margin:auto; /*Margin within the flex box*/
+}
+
+/* Navigation bar section*/
+#navbar {
+    padding: 16px; /*Padding of the nav bar*/
+    position: sticky; /*For the nav bar to stick as the user scrolls*/
+    top: 0; /*ensures bar sticks to the top of the users screen as they scroll*/
+    z-index: 9999; /*This is to ensure nav bar stays on top of all content in page*/
+}
+.navbar {
+    display: flex; /*Container to hold the elements in the nav bar*/
+    width: 540px; /*Width of the container*/
+    padding: 16px;/*Padding of the container*/
+    margin: auto; /*Margin of the container*/
+    border-radius: 70px; /*Radius of the nav bar (rounded corners*/
+    background-color: #836A60;/*Colour of the nav bar*/
+}
+.navbutton {
+    font-family: "Satoshi", sans-serif; /*Font family of the buttons in the nav bar*/
+    font-weight: medium; /*Font weight of the buttons in the nav bar*/
+    font-size: 20px; /*Font size of the buttons in the nav bar*/
+    margin: auto; /*Margin between the words*/
+    text-decoration: none; /*Gets rid of the default underline of the words*/
+    color: #FFFFFF; /*Colour of the words in the nav bar*/
+}
+
+.navbutton:hover {
+    color: #DCC7B3; /*Colour of the words upon hover*/
+    text-decoration: underline; /*Creates underline upon hovering on the word*/
+    transition: 0.5s; /*Ensures the state change is smooth*/
+}
+
+
+/*To adjust and centralise image*/
+.machine-container img{
+    width: 800px;  /*width of the image*/
+    height: 800px; /*Height of the image*/
+    object-fit: cover; /*Ensures image is proportional and is not compressed or distorted*/
+}
+
+/*The colour option button*/
+.color-buttons {
+    position: absolute; /*Positioning of the colour buttons will always be exact*/
+    right: 150px; /*Moves the buttons 150px from the right*/
+    top: 50%; /*Ensures the top edge*/
+    transform: translateY(-50%); /*shifts the element upwards so that its vertical center aligns with the center of the container.*/
+    display: flex; /*Container to hold the colour buttons*/
+    flex-direction: column; /*The layout of the buttons*/
+    gap: 15px; /*The gap between each of the buttons*/
+}
+
+.color-btn {
+    width: 40px; /*Width of each button*/
+    height: 40px; /*Height of each button*/
+    border-radius: 50%; /*to make the button a circle*/
+    border: none; /*Gets rid of the default outline*/
+    cursor: pointer; /*Changes the cursor to a pointer upon hover*/
+    transition: transform 0.2s ease, border-color 0.2s ease; /*Ensures the change in state is smooth*/
+}
+
+#color-Black {
+    background-color: #010101; /*Black Button*/
+}
+
+#color-Grey {
+    background-color: #8A8A8A;/*Grey Button*/
+}
+
+#color-Brown {
+    background-color: #5a3220;/*Brown Button*/
+}
+
+.color-btn:hover {
+    transform: scale(1.1); /*Makes the button slightly bigger upon hover*/
+    opacity: 70%; /*lowers the opacity of the button upon hover*/
+    border: 3px solid #ffffff; /*Creates a white border arond the button upon hover*/
+}
+
+
+/* Form Container */
+.form-container {
+    background: #fff; /*Background colour of the from*/
+    padding: 30px; /*The padding of the inside of the form eg the space between the input field and the border horizontally*/
+    border-radius: 12px; /*The rounded corners of the form*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*The drop shadow effect for the form*/
+    max-width: 400px; /*Sets the width of the form to 400px*/
+    margin-bottom: 120px; /*Bottom margin which creates the gap between the form and the footer*/
+    }
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px; /*Creates vertical spacing of 20px between elements within the form*/
+}
+
+/* Form Labels */
+.form-label {
+    display: block; /*Makes the label behave like a block, easier to style*/
+    font-size: 14px;/*Sets font size of the label to be 14px*/
+    color: #333;/*Colour of the placeholder text for both the contact and emailm input field*/
+    margin-bottom: 5px;/*Vertical space between the label of the input field and the input field itself is 5px*/
+    font-weight: bold;/*Makes the weight weight of the label is bold*/
+}
+
+/* Form Inputs */
+.form-input {
+    width: 100%;/*Background colour of the from*/
+    padding: 10px;/*Add the spacing inside of the input fields*/
+    font-size: 16px;/*Makes the font size of the placeholder text 16px*/
+    border: 1px solid #ccc;/*Creates a stroke for the input field*/
+    border-radius: 6px;/*Creates the rounded corners of the input field*/
+    box-sizing: border-box;/*Ask teri to see if she understand*/
+    transition: all 0.3s ease-in-out;/*Ensures the change in state is smooth*/
+}
+
+/*Focuses on the state changes of the input fields when they are selected*/
+.form-input:focus {
+    border-color: #007BFF;/*When selected, this is the colour of the stroke of the input field*/
+    outline: none;/*Removes the default stroke of the input field when selected*/
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);/*The colour of the shadow of the input field when it is selected*/
+}
+
+/* Terms and Conditions */
+.terms {
+    display: flex; /*Aligns the checkbox and the label side by side*/
+    align-items: center;/*Vertically centers the checkbox*/
+    font-size: 14px;/*Font size of the terms and conditions*/
+    color: #333;/*The colour of the text*/
+}
+
+.terms-label {
+    margin-left: 8px; /*pushes the term and condition labels 8px to the right*/
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;/*Makes the button the full width of the container*/
+    padding: 12px;/*Adds padding within the button by 12px*/
+    font-size: 16px;/*Font size of the text inside of the pre-order button*/
+    color: white;/*Colour of the text inside the button*/
+    background-color: #B87333;/*Colour of the button itself*/
+    border: none;/*Gets rid of the default black border*/
+    border-radius: 20px;/*Rounding of the button is 20px*/
+    cursor: pointer;/*Changes the cursor to a pointer when hovered on the button*/   
+}
+
+.submit-button:hover {
+    background-color: #4B2e2a;/*Colour of the button upon hover*/
+    transition: background-color 0.3s ease;/*Helps to smoothly transitions the background colour upon hover*/
+}
+
+/*footer section*/
+#Footer {
+    width: 100%; /*Width of the footer*/
+    height: 360px; /*The height of the footer*/
+    display: flex; /*Makes a container that makes easier to style content woithin the cointainer*/
+    justify-content: center; /*centers all the content in footer*/
+    background-color:#4b2e2a41; /*Colour of the footer*/
+}
+
+
+.footer-logo {
+    margin:auto; /*Makes sure the Sen Coffee Logo is evenly spaced*/
+    width: 240px; /*Widath of the logo container is 240px*/
+    height:140px /*Height of the logo container is 140px*/
+}
+
+.footer-logo img {
+    width: 240px; /*Width of the actual*/
+}
+
+.top {
+    height: 124px; /*Height of the top part of the footer*/
+    padding: 24px; /*padding of the content within the top of the footer*/
+    display: flex; /*Container that holds all the content in the footer*/
+}
+
+.footer-nav {
+    width: 900px; /* Width of Container to hold the clickable words*/
+    height: 140px; /* Height of Container to hold the clickable words*/
+    display: flex; /*Container to hold the clickable words*/
+}
+
+.footer-btn {
+    font-family: "Satoshi", sans-serif; /*Font family for the text in the footer*/
+    font-weight: medium; /*Font weight of the text*/
+    font-size: 16px;/*Font size of the text*/
+    margin: auto;/*Margin for the text inside of the footer*/
+    text-decoration: none;/*Gets rid of the default underline in the linked text*/
+    color: #FFFFFF;/*Colour of the text*/
+}
+
+.footer-btn:hover {
+    text-decoration: underline; /*Upon hover the text will be underlined*/
+    color: #B87333;/*Colour of the underline*/
+}
+
+.footer-divider {
+    margin: 8px auto;
+    width: 1120px;/*Width of the line*/
+    height: 2px;/*Height of the line*/
+    background-color: #5a4037; /* Divider line colour */
+  }
+
+  .bottom {
+    display: flex; /*Container for the icons and the copyright text*/
+    flex-direction: column; /*Ensure content is centered*/
+    align-items: center; /*enusres content is aligned in the center*/
+    padding-top: 24px;/*padding between the divider and the end of the footer*/
+    gap:24px;/*Space between the icons and the copyright text*/
+  }
+
+  .bottom img {
+    width: 40px; /*The width of the icons*/
+    height:auto; /*The height of the icons*/
+    gap: 8px; /*The spacing between the icons*/
+  }
+
+  .footer-copyright {
+    color:#D9D9D9; /*Colour of the copy right text*/
+  }
+
+
+   

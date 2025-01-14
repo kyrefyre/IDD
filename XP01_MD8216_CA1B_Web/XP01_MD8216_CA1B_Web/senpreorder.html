@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"> <!--To declare that the language of the website will be in english-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Makes the page adaptable to any device, and when entering the page, it starts at 100% zoom-->
+    <title>Sen Coffee Pre-Order</title> <!--Title of the webpage inside the browser-->
+    <link rel="stylesheet" href="style_xpd_css/Senpre-order.css"><!--Link to the CSS StyleSheet for the Sen Coffee Pre-Order Page-->
+</head>
+<body>
+
+    <!--Navigation bar-->
+    <header class="header">
+        <div class="logo">
+            <img src="Images/Sen coffee png logo.png"> <!-- Sen Coffee centre logo -->
+        </div>
+        </header>
+        <section id="navbar">
+         <div class="navbar">
+            <a href="senhome.html" class="navbutton">Home</a> <!-- Sen Coffee Navigation link Home Page -->
+            <a href="product.html" class="navbutton">Product</a> <!-- Sen Coffee Navigation link Product Page -->
+            <a href="senpre-order.html" class="navbutton">Pre-order</a> <!-- Sen Coffee Navigation link to Pre-Order Page -->
+         </div>
+        </section>
+
+        <!--The buttons for colour options-->
+        <div class="color-buttons">
+                <button class="color-btn" id="color-Black"></button><!--The black colour option button-->
+                <button class="color-btn" id="color-Grey"></button><!--The Grey colour option button-->
+                <button class="color-btn" id="color-Brown"></button><!--The Brown colour option button-->
+        </div>
+            
+        <div class="machine-container">
+                <img src="Images/Coffee machine main.png" alt="Coffee Machine"><!--The image of the coffee machine, and the alt if the image does not load, it will-->
+        </div>
+            
+
+    <!-- Pre-Order Form Section -->
+    <section class="form-container"><!--CSS class, for later styling in CSS-->
+        <form action="action_page.php" method="POST" class="pre-order-form"> <!--Input form for the user, the POST Method is added, because it shows error screen, when the from is done incorrectly-->
+           
+            <!-- Contact Number Field -->
+            <div class="form-group"><!--Assigns a CSS class to this specific division for CSS Styling later-->
+                <label for="Contact" class="form-label">Contact Number</label> <!--"For=contact" links the input field to the text outside the input field, making the the word contact clickable-->
+                <input type="text" id="Contact" name="Contact" placeholder="+65 9505 4954" class="form-input" required> <!--Input type is text for users to type in their information, with placeholder text as an example.-->
+            </div>
+
+            <!-- Email Address Field -->
+            <div class="form-group"> <!--Assigns a CSS class to this specific division for CSS Styling later-->
+                <label for="Email" class="form-label">E-mail address</label>  <!--"For=Email" links the input field to the text outside the input field, making the the word contact clickable-->
+                <input type="email" id="Email" name="Email" placeholder="Coffeelover981@gmail.com" class="form-input" required> <!--Input type is text for users to type in their information, with placeholder text as an example.-->
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form-group terms"> <!--Assigns a CSS class to this specific division for CSS Styling later-->
+                <input type="checkbox" id="terms" required> <!--Creates a checkbox beside the text for users to agree to the terms and conditions, required making it compulsory to do check the box before moving on-->
+                <label for="terms" class="terms-label"> <!--Adds CSS class to the label for styling later-->
+                    I agree to the terms and conditions of Sen Coffee and how they will make use of my personal particulars for this pre-order. <!--Text of our terms and conditions-->
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-buttons"> <!--Assigns a CSS class to this specific division for CSS Styling later-->
+                <input type="submit" value="Place Pre-order" class="submit-button"> <!--Creates a button to submit details, the value changes the name of the button to "Place Pre-Order"-->
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section-->
+    <section id="Footer"> <!--Section ID for the footer section of the page for general styling in CSS later-->
+        <footer class="footer"><!--For specific styling later in CSS-->
+            
+          <div class="top"><!--For specific styling later in CSS-->
+           <div class="footer-logo"><!--For specific styling later in CSS-->
+              <img src="Images/Sen coffee png logo.png"> <!-- Sen Coffee top left hand logo -->
+            </div>
+
+           <nav class="footer-nav"><!--For specific styling later in CSS-->
+           <a href="product.html" class="footer-btn"><!--Link to the product page-->
+              Product
+           </a>
+           
+           <a href="senpreorder.html" class= "footer-btn"><!--Link to the Pre-Order page-->
+              Pre-Order
+           </a>
+
+           <a href="NIL" class= "footer-btn"><!--No link, just hover interaction in CSS-->
+              Contact Us
+           </a>
+          </nav>
+        </div>
+
+        <div class="footer-divider"></div><!--For Specific styling in CSS later-->
+    
+
+        <div class="bottom"><!--For Specific styling in CSS later-->
+          <div class="footer-social"><!--For Specific styling in CSS later-->
+            <img src="Images/ig.png" class="social-icon"> </a><!--Image for the footer (Instagram)-->
+            <img src="Images/ws.png" class="social-icon"> </a><!--Image for the footer (Whatsapp)-->
+            <img src="Images/tt.png" class="social-icon"> </a><!--Image for the footer (Tik Tok)-->
+           </div>
+        
+
+           <div class="footer-copyright"><!--For Specific styling in CSS later-->
+              <p>@Copyright. All Rights Reserved</p><!--Copyright text for the very bottom of the footer-->
+           </div>
+          </div>
+
+        </footer>
+       </section>
+</body>
+</html>
