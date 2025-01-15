@@ -18,36 +18,49 @@ body {
 
 /*Top logo section*/
 .header {
-    display: flex ; /*Container to hold the Logo image*/
+    display: flex; /*Container to hold the Logo image*/
     align-items: center; /*Aligns the flex container to the center*/
     margin: auto; /*Margin for the flex container*/
-    padding: 1rem; /*Padding for the flex container*/
+    padding: 16px; /*Padding for the flex container*/
 }
 
 header div img {
     width: 160px; /*Logo image width*/
-    margin:auto; /*Margin within the flex box*/
+    margin: auto; /*Margin within the flex box*/
+}
+
+@media (max-width: 768px) {
+    .header {
+        position: fixed; /*Fixes the header to the top*/
+        top: 0; /*Ensures it sticks to the very top*/
+        width: 100%; /*Takes up the full horizontal space*/
+        z-index: 1000; /*Ensures it stays on top of other content*/
+        background-color: #836A60; /*Optional: Add background color for better visibility*/
+    }
+    header div img {
+        width: 120px; /*Adjust logo size for smaller screens*/
+    }
 }
 
 /* Navigation bar section*/
 #navbar {
-    padding: 2rem; /*Padding of the nav bar*/
+    padding: 16px; /*Padding of the nav bar*/
     position: sticky; /*For the nav bar to stick as the user scrolls*/
     top: 0; /*ensures bar sticks to the top of the users screen as they scroll*/
     z-index: 9999; /*This is to ensure nav bar stays on top of all content in page*/
 }
 .navbar {
     display: flex; /*Container to hold the elements in the nav bar*/
-    width: 25rem; /*Width of the container*/
-    padding: 1rem;/*Padding of the container*/
+    width: 540px; /*Width of the container*/
+    padding: 16px;/*Padding of the container*/
     margin: auto; /*Margin of the container*/
-    border-radius: 30rem; /*Radius of the nav bar (rounded corners*/
+    border-radius: 70px; /*Radius of the nav bar (rounded corners*/
     background-color: #836A60;/*Colour of the nav bar*/
 }
 .navbutton {
     font-family: "Satoshi", sans-serif; /*Font family of the buttons in the nav bar*/
     font-weight: medium; /*Font weight of the buttons in the nav bar*/
-    font-size: 1.5rem; /*Font size of the buttons in the nav bar*/
+    font-size: 20px; /*Font size of the buttons in the nav bar*/
     margin: auto; /*Margin between the words*/
     text-decoration: none; /*Gets rid of the default underline of the words*/
     color: #FFFFFF; /*Colour of the words in the nav bar*/
@@ -59,12 +72,38 @@ header div img {
     transition: 0.5s; /*Ensures the state change is smooth*/
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Change to vertical layout on smaller screens */
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove rounded corners */
+        justify-content: center; /* Center buttons */
+    }
+    .navbutton {
+        margin: 8px 0; /* Add margin between buttons */
+        text-align: center; /* Center align text */
+    }
+    #navbar {
+        position: fixed; /* Ensure navbar stays fixed at the top */
+        top: 60px; /* Stick below the logo */
+        width: 100%; /* Full width on smaller screens */
+        z-index: 9999; /* Ensure it stays on top of other content */
+    }
+}
+
 
 /*To adjust and centralise image*/
-.machine-container img{
+.machine-canvas-container img{
     max-width: 100%;  /*width of the image*/
     height: auto; /*Height of the image*/
     object-fit: cover; /*Ensures image is proportional and is not compressed or distorted*/
+    margin-top: 30rem;
+}
+
+@media (max-width: 768px) {
+    .machine-canvas-container{
+       margin-top: 1000px;
+    }
 }
 
 /*The colour option button*/
@@ -113,7 +152,7 @@ header div img {
     border-radius: 2rem; /*The rounded corners of the form*/
     box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1); /*The drop shadow effect for the form*/
     max-width: 25%; /*Sets the width of the form to 400px*/
-    margin-bottom: 15rem; /*Bottom margin which creates the gap between the form and the footer*/
+    margin-bottom: 10rem; /*Bottom margin which creates the gap between the form and the footer*/
     margin-top: 5rem;
     }
 
@@ -136,7 +175,7 @@ header div img {
     width: 100%;/*Background colour of the from*/
     padding: 1rem;/*Add the spacing inside of the input fields*/
     font-size: 1rem;/*Makes the font size of the placeholder text 16px*/
-    border: 0.5px solid #ccc;/*Creates a stroke for the input field*/
+    border: 0.1rem solid #ccc;/*Creates a stroke for the input field*/
     border-radius: 1rem;/*Creates the rounded corners of the input field*/
     box-sizing: border-box;/*Ask teri to see if she understand*/
     transition: all 0.3s ease-in-out;/*Ensures the change in state is smooth*/
@@ -158,18 +197,18 @@ header div img {
 }
 
 .terms-label {
-    margin-left: 8px; /*pushes the term and condition labels 8px to the right*/
+    margin-left: 1.5rem; /*pushes the term and condition labels 8px to the right*/
 }
 
 /* Submit Button */
 .submit-button {
     width: 100%;/*Makes the button the full width of the container*/
-    padding: 12px;/*Adds padding within the button by 12px*/
-    font-size: 16px;/*Font size of the text inside of the pre-order button*/
+    padding: 1rem;/*Adds padding within the button by 12px*/
+    font-size: 1rem;/*Font size of the text inside of the pre-order button*/
     color: white;/*Colour of the text inside the button*/
     background-color: #B87333;/*Colour of the button itself*/
     border: none;/*Gets rid of the default black border*/
-    border-radius: 20px;/*Rounding of the button is 20px*/
+    border-radius: 1rem;/*Rounding of the button is 20px*/
     cursor: pointer;/*Changes the cursor to a pointer when hovered on the button*/   
 }
 
@@ -249,9 +288,9 @@ header div img {
     color:#D9D9D9; /*Colour of the copy right text*/
   }
 
-  .machine-container{
-    width: 1600px;
-    height: 1800px;
+  .machine-canvas-container{
+    width: 4000px;
+    height: 4200px;
   }
 
 
