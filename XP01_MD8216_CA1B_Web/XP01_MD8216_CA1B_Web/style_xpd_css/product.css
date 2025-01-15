@@ -1,0 +1,332 @@
+*{
+margin: 0px;
+border: none;
+padding: 0px;
+} /* this is for browser reset*/
+
+/* Styling for the main heading */
+h1 {
+    font-family: "Chillax", sans-serif; /* Use decorative font for h1 */
+    font-size: 270px; /* Large font for emphasis */
+    font-weight: 500; /* Semi-bold weight for balance */
+    text-align: center; /* Center align text */
+    line-height: 0px; /* No extra space between lines */
+}
+
+/* Styling for second-level heading */
+h2 {
+    font-family: "Satoshi", sans-serif; /* Sleek sans-serif font */
+    font-size: 56px; /* Medium-large size for subheadings */
+    font-weight: 800; /* Bold text for importance */
+    font-style: none; /* Normal text style */
+    text-align: left; /* Align text to the left */
+    line-height: 0px; /* Tight line spacing */
+}
+
+/* Styling for smaller headers and paragraphs */
+h3 {
+    font-family: "Satoshi", sans-serif; /* Keep consistent font family */
+    font-size: 24px; /* Smaller size for sub-subheadings */
+    font-weight: 600; /* Medium-bold text */
+    font-style: none; /* Normal text style */
+    text-align: left; /* Align text to the left */
+    line-height: 0px; /* No extra spacing */
+}
+
+h4 {
+    font-family: "Satoshi", sans-serif; /* Maintain brand font consistency */
+    font-size: 16px; /* Smaller size for minor headings */
+    font-weight: 600; /* Medium-bold weight */
+    font-style: none; /* Keep normal style */
+    text-align: left; /* Left-align text */
+    line-height: 0px; /* Keep lines tightly spaced */
+}
+
+/* Body styling */
+body {
+    font-family: 'Satoshi', sans-serif; /* Use a clean font for body text */
+    color: #303030; /* Neutral gray for readability */
+    width: 100%; /* Ensure the body spans full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex; /* Flexbox layout for positioning */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements in the body */
+    background-size: 1920px; /* Set fixed background size */
+    background-position: top center; /* Align background to the top center */
+    background-repeat: no-repeat; /* Avoid repeating background */
+    background-image: linear-gradient(#DCC7B3, #766B60); /* Add gradient background */
+}
+
+ /*Top logo section*/
+.header {
+    display: flex ; /*Container to hold the Logo image*/
+    align-items: center; /*Aligns the flex container to the center*/
+    margin: auto; /*Margin for the flex container*/
+    padding: 16px; /*Padding for the flex container*/
+}
+
+header div img {
+    width: 160px; /*Logo image width*/
+    margin:auto; /*Margin within the flex box*/
+}
+
+/* Navigation bar section*/
+#navbar {
+    padding: 16px; /*Padding of the nav bar*/
+    position: sticky; /*For the nav bar to stick as the user scrolls*/
+    top: 0; /*ensures bar sticks to the top of the users screen as they scroll*/
+    z-index: 9999; /*This is to ensure nav bar stays on top of all content in page*/
+}
+.navbar {
+    display: flex; /*Container to hold the elements in the nav bar*/
+    width: 540px; /*Width of the container*/
+    padding: 16px;/*Padding of the container*/
+    margin: auto; /*Margin of the container*/
+    border-radius: 70px; /*Radius of the nav bar (rounded corners*/
+    background-color: #836A60;/*Colour of the nav bar*/
+}
+.navbutton {
+    font-family: "Satoshi", sans-serif; /*Font family of the buttons in the nav bar*/
+    font-weight: medium; /*Font weight of the buttons in the nav bar*/
+    font-size: 20px; /*Font size of the buttons in the nav bar*/
+    margin: auto; /*Margin between the words*/
+    text-decoration: none; /*Gets rid of the default underline of the words*/
+    color: #FFFFFF; /*Colour of the words in the nav bar*/
+}
+
+.navbutton:hover {
+    color: #DCC7B3; /*Colour of the words upon hover*/
+    text-decoration: underline; /*Creates underline upon hovering on the word*/
+    transition: 0.5s; /*Ensures the state change is smooth*/
+}
+
+/*HeroBanner section and 3d model*/
+#HeroBanner {
+    height: 600px; /*Height of the container*/
+    margin: 24px;/*Margin of the flex container*/
+    display: flex; /*Container holding all elements of the Herobanner*/
+    justify-content: center; /*To center the all the items in the container horizontally */
+    align-items: center; /*To center items the container vertically*/
+}
+
+.ProductContainer {
+    padding-top: 32px; /*Padding for the image within the container*/ 
+    width: 100%;/*Width of the image within the container*/
+}
+
+.product-name {
+    width: 400px; /*Container width*/
+    padding-left: 56px; /*The amount of space from the left of the container holding the product price and name*/
+    display: flex; /*Container holding the name and price of our coffee machine*/
+    flex-direction: column; /*Make sure the text are layout vertically*/
+    justify-content: center;/*Makes sure the items in the container are centered horizontally*/
+    align-items: left;/*Aligns the text to the left of the container*/
+    gap: 50px; /*The gap between the Name of the product and the price*/
+}
+
+.ProductContainer img {
+    width: 600px; /*Width of the container holding the image*/
+    height: 600px;/*Height of the container holding the image*/
+    object-fit: cover; /*Makes it so the image does not distort and become disproportional*/ 
+}
+
+/*The colour option button*/
+
+
+.color-buttons {
+    transform: translateY(-50%);/*shifts the element upwards so that its vertical center aligns with the center of the container.*/
+    padding-right: 64px; /*Spacing of the container holding the buttons from the right side of the page*/
+    display: flex; /*Container to hold the colour buttons*/
+    flex-direction: column; /*The layout of the buttons*/
+    gap: 15px;/*The gap between each of the buttons*/
+}
+
+.color-btn {
+    width: 40px;/*Width of each button*/
+    height: 40px;/*Height of each button*/
+    border-radius: 50%; /*to make the button a circle*/
+    border: none; /*Gets rid of the default outline*/
+    cursor: pointer; /*Changes the cursor to a pointer upon hover*/
+    transition: transform 0.2s ease, border-color 0.2s ease; /*Ensures the change in state is smooth*/
+}
+
+#color-Black {
+    background-color: #010101; /*Black Button*/
+}
+
+#color-Grey {
+    background-color: #8A8A8A; /*Grey Button*/
+}
+
+#color-Brown {
+    background-color: #5a3220; /*Brown Button*/
+}
+
+.color-btn:hover {
+    transform: scale(1.1);  /*Makes the button slightly bigger upon hover*/
+    opacity: 70%; /*lowers the opacity of the button upon hover*/
+    border: 3px solid #ffffff; /*Creates a white border arond the button upon hover*/
+}
+
+/*feature Section*/
+.feature {
+    max-width: 1280px; /* Set max width of content inside*/
+    max-height: 400px; /* Set max height of content inside*/
+    margin: auto; /*centralising content*/
+    margin-top: 64px; /*upper margin of feature sections*/
+    display: flex;  /*makes a container that makes easier to style content within the cointainer*/
+    justify-content: center; /*centers all the content in footer*/
+    align-items: center; /*Aligns items vertically center*/
+    gap: 124px; /*Spacing between the feature img and text*/
+}
+
+.feature-text {
+    padding-left: 64px; /*left side padding of the text box*/
+    padding-right:64px; /* right side padding of the text box*/
+    display: flex; /*makes a container that makes easier to style content within the cointainer*/
+    flex-direction: column; /* Changing direction of flex box allignment*/
+    gap: 54px; /* Spacing between the header and description of features*/
+}
+
+.feature-text p{
+    font-weight:500; /* set font weight of paragraph text*/
+}
+
+.btns {
+    display: flex; /*makes a container that makes easier to style content within the cointainer*/
+    justify-content: flex-start; /* allign content to the start of flexbox horizontally*/
+    align-items: center; /*Aligns items vertically center*/
+    gap: 24px; /*space between the two feature buttons*/
+}
+
+.model-feature1 {
+    width: 80px; /* set width of button*/
+    height: 80px; /* set height of button*/
+    border-radius: 100px; /*rounded corners for button*/
+    background-color: #836A60; /* set bg color of section*/
+    display: flex;  /*makes a container that makes easier to style content within the cointainer*/
+    justify-content: center; /*centers all the content in footer*/
+    align-items: center; /*Aligns items vertically center*/
+}
+
+.model-feature1:hover {
+    background-color: #4b2e2a; /*trasition for the bg color change*/
+    color:#D9D9D9; /*trasition for the text color change*/
+    transition: 0.5s;  /*trasition for the color change*/
+}
+
+.model-feature2 {
+    width: 80px; /*set width of the section*/
+    height: 80px;/* set height of the section*/
+    border-radius: 100px; /* rounded corners of setion*/
+    background-color: #836A60; /* set bg color of section*/
+    display: flex; /*makes a container that makes easier to style content within the cointainer*/
+    justify-content: center; /*centers all the content in footer*/
+    align-items: center; /*Aligns items vertically center*/
+}
+
+.model-feature2:hover {
+    background-color: #4b2e2a; /*trasition for the bg color change*/
+    color:#D9D9D9; /*trasition for the text color change*/
+    transition: 0.5s; /*trasition for the color change*/
+}
+
+.model img{
+    padding: 64px; /*padding of image*/
+    width:400px; /*Set consistant width of the image*/
+    height: 400px; /*Set consistant height for image*/
+    object-fit: cover; /* Ensures image stays in aspect ratio while filling the dimensions above*/
+}
+
+.PO-content {
+    margin: auto; /*centralising content*/
+    margin-top: 124px; /*Upper margin for spacing between content*/
+    margin-bottom: 64px; /* Added margin at the bottom of content*/
+}
+
+.PO-btn {
+    width: 800px;/* set width of the CTA button*/
+    padding: 32px; /*padding for the button text*/
+    border-radius: 70px; /* rounded corners for button*/
+    background-color: #B87333; /*set color of button background*/
+    color:#D9D9D9; /* set color of button text*/
+    text-decoration: none; /* removes any decoration of text*/
+    display: flex; /* Creates a container for the items to be arranged*/
+    justify-content: center; /*Aligns the content horizontally*/
+}
+
+.PO-btn:hover {
+    background-color: #4b2e2a; /*changed background color of button*/
+    transition: 0.5s; /*trasition for the color change*/
+}
+
+/*footer section*/
+#Footer {
+    width: 100%; /*Width of the footer*/
+    height: 360px; /*The height of the footer*/
+    display: flex; /*makes a container that makes easier to style content within the cointainer*/
+    justify-content: center; /*centers all the content in footer*/
+    background-color:#4b2e2a41; /*Colour of the footer*/
+}
+
+
+.footer-logo {
+    margin:auto; /*Makes sure the Sen Coffee Logo is evenly spaced*/
+    width: 240px; /*Widath of the logo container is 240px*/
+    height:140px /*Height of the logo container is 140px*/
+}
+
+.footer-logo img {
+    width: 240px; /*Width of the actual*/
+}
+
+.top {
+    height: 124px; /*Height of the top part of the footer*/
+    padding: 24px; /*padding of the content within the top of the footer*/
+    display: flex; /*Container that holds all the content in the footer*/
+}
+
+.footer-nav {
+    width: 900px; /*set width of nav bar in footer*/
+    height: 140px; /*set height of nav bar in footer*/
+    display: flex; /*makes a container that makes easier to style content woithin the cointainer*/
+}
+
+.footer-btn {
+    font-family: "Satoshi", sans-serif; /*Font family for the text in the footer*/
+    font-weight: medium; /*Font weight of the text*/
+    font-size: 16px;/*Font size of the text*/
+    margin: auto;/*Margin for the text inside of the footer*/
+    text-decoration: none;/*Gets rid of the line in the linked text*/
+    color: #FFFFFF;/*Colour of the text*/
+}
+
+.footer-btn:hover {
+    text-decoration: underline; /*Upon hover the text will be underlined*/
+    color: #B87333;/*Colour of the underline*/
+}
+
+.footer-divider {
+    margin: 8px auto;
+    width: 1120px;/*Width of the line*/
+    height: 2px;/*Height of the line*/
+    background-color: #5a4037; /* Divider line colour */
+  }
+
+  .bottom {
+    display: flex; /*Container for the icons and the copyright text*/
+    flex-direction: column; /*Ensure content is centered*/
+    align-items: center; /*enusres content is aligned in the center*/
+    padding-top: 24px;/*padding between the divider and the end of the footer*/
+    gap:24px;/*Space between the icons and the copyright text*/
+  }
+
+  .bottom img {
+    width: 40px; /*The width of the icons*/
+    height:auto; /*The height of the icons*/
+    gap: 8px; /*The spacing between the icons*/
+  }
+
+  .footer-copyright {
+    color:#D9D9D9; /*Colour of the copy right text*/
+  }
