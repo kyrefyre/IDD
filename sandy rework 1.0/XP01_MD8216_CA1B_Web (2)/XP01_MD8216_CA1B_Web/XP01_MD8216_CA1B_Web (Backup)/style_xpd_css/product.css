@@ -374,3 +374,34 @@ header div img {
         width: 100%;
     }
 }
+
+.text-column-left {
+    width: 60%;
+    position: left;
+}
+
+.canvas-container-right {
+    width: 40%;
+    position: right;
+}
+
+.text-column-right {
+    width: 60%;
+    position: right;
+}
+
+.canvas-container-left {
+    width: 40%;
+    position: left;
+}
+
+@media screen and (max-width: 600px) {
+    .text-column-left, .canvas-container-right {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .text-column-right, .canvas-container-left {
+        width: 100%;
+    }
+}
