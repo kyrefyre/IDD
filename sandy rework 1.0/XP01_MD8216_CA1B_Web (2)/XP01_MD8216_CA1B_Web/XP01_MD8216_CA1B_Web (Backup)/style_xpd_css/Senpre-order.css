@@ -18,7 +18,7 @@ body {
 
 /*Top logo section*/
 .header {
-    display: flex ; /*Container to hold the Logo image*/
+    display: flex; /*Container to hold the Logo image*/
     align-items: center; /*Aligns the flex container to the center*/
     margin: auto; /*Margin for the flex container*/
     padding: 16px; /*Padding for the flex container*/
@@ -26,7 +26,20 @@ body {
 
 header div img {
     width: 160px; /*Logo image width*/
-    margin:auto; /*Margin within the flex box*/
+    margin: auto; /*Margin within the flex box*/
+}
+
+@media (max-width: 768px) {
+    .header {
+        position: fixed; /*Fixes the header to the top*/
+        top: 0; /*Ensures it sticks to the very top*/
+        width: 100%; /*Takes up the full horizontal space*/
+        z-index: 1000; /*Ensures it stays on top of other content*/
+        background-color: #836A60; /*Optional: Add background color for better visibility*/
+    }
+    header div img {
+        width: 120px; /*Adjust logo size for smaller screens*/
+    }
 }
 
 /* Navigation bar section*/
@@ -59,28 +72,47 @@ header div img {
     transition: 0.5s; /*Ensures the state change is smooth*/
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Change to vertical layout on smaller screens */
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove rounded corners */
+        justify-content: center; /* Center buttons */
+    }
+    .navbutton {
+        margin: 8px 0; /* Add margin between buttons */
+        text-align: center; /* Center align text */
+    }
+    #navbar {
+        position: fixed; /* Ensure navbar stays fixed at the top */
+        top: 60px; /* Stick below the logo */
+        width: 100%; /* Full width on smaller screens */
+        z-index: 9999; /* Ensure it stays on top of other content */
+    }
+}
+
 
 /*To adjust and centralise image*/
 .machine-container img{
-    width: 800px;  /*width of the image*/
-    height: 800px; /*Height of the image*/
+    max-width: 100%;  /*width of the image*/
+    height: auto; /*Height of the image*/
     object-fit: cover; /*Ensures image is proportional and is not compressed or distorted*/
 }
 
 /*The colour option button*/
 .color-buttons {
     position: absolute; /*Positioning of the colour buttons will always be exact*/
-    right: 150px; /*Moves the buttons 150px from the right*/
-    top: 50%; /*Ensures the top edge*/
+    right: 15rem; /*Moves the buttons 150px from the right*/
+    top: 45%; /*Ensures the top edge*/
     transform: translateY(-50%); /*shifts the element upwards so that its vertical center aligns with the center of the container.*/
     display: flex; /*Container to hold the colour buttons*/
     flex-direction: column; /*The layout of the buttons*/
-    gap: 15px; /*The gap between each of the buttons*/
+    gap: 2rem; /*The gap between each of the buttons*/
 }
 
 .color-btn {
-    width: 40px; /*Width of each button*/
-    height: 40px; /*Height of each button*/
+    width: 3rem; /*Width of each button*/
+    height: 3rem; /*Height of each button*/
     border-radius: 50%; /*to make the button a circle*/
     border: none; /*Gets rid of the default outline*/
     cursor: pointer; /*Changes the cursor to a pointer upon hover*/
@@ -102,41 +134,42 @@ header div img {
 .color-btn:hover {
     transform: scale(1.1); /*Makes the button slightly bigger upon hover*/
     opacity: 70%; /*lowers the opacity of the button upon hover*/
-    border: 3px solid #ffffff; /*Creates a white border arond the button upon hover*/
+    border: 0.3rem solid #ffffff; /*Creates a white border arond the button upon hover*/
 }
 
 
 /* Form Container */
 .form-container {
     background: #fff; /*Background colour of the from*/
-    padding: 30px; /*The padding of the inside of the form eg the space between the input field and the border horizontally*/
-    border-radius: 12px; /*The rounded corners of the form*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*The drop shadow effect for the form*/
-    max-width: 400px; /*Sets the width of the form to 400px*/
-    margin-bottom: 120px; /*Bottom margin which creates the gap between the form and the footer*/
+    padding: 5rem; /*The padding of the inside of the form eg the space between the input field and the border horizontally*/
+    border-radius: 2rem; /*The rounded corners of the form*/
+    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1); /*The drop shadow effect for the form*/
+    max-width: 25%; /*Sets the width of the form to 400px*/
+    margin-bottom: 15rem; /*Bottom margin which creates the gap between the form and the footer*/
+    margin-top: 5rem;
     }
 
 /* Form Group */
 .form-group {
-    margin-bottom: 20px; /*Creates vertical spacing of 20px between elements within the form*/
+    margin-bottom: 1.5rem; /*Creates vertical spacing of 20px between elements within the form*/
 }
 
 /* Form Labels */
 .form-label {
     display: block; /*Makes the label behave like a block, easier to style*/
-    font-size: 14px;/*Sets font size of the label to be 14px*/
+    font-size: 1rem;/*Sets font size of the label to be 14px*/
     color: #333;/*Colour of the placeholder text for both the contact and emailm input field*/
-    margin-bottom: 5px;/*Vertical space between the label of the input field and the input field itself is 5px*/
+    margin-bottom: 0.5rem;/*Vertical space between the label of the input field and the input field itself is 5px*/
     font-weight: bold;/*Makes the weight weight of the label is bold*/
 }
 
 /* Form Inputs */
 .form-input {
     width: 100%;/*Background colour of the from*/
-    padding: 10px;/*Add the spacing inside of the input fields*/
-    font-size: 16px;/*Makes the font size of the placeholder text 16px*/
-    border: 1px solid #ccc;/*Creates a stroke for the input field*/
-    border-radius: 6px;/*Creates the rounded corners of the input field*/
+    padding: 1rem;/*Add the spacing inside of the input fields*/
+    font-size: 1rem;/*Makes the font size of the placeholder text 16px*/
+    border: 0.5px solid #ccc;/*Creates a stroke for the input field*/
+    border-radius: 1rem;/*Creates the rounded corners of the input field*/
     box-sizing: border-box;/*Ask teri to see if she understand*/
     transition: all 0.3s ease-in-out;/*Ensures the change in state is smooth*/
 }
@@ -145,14 +178,14 @@ header div img {
 .form-input:focus {
     border-color: #007BFF;/*When selected, this is the colour of the stroke of the input field*/
     outline: none;/*Removes the default stroke of the input field when selected*/
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);/*The colour of the shadow of the input field when it is selected*/
+    box-shadow: 0 0 1rem rgba(0, 123, 255, 0.3);/*The colour of the shadow of the input field when it is selected*/
 }
 
 /* Terms and Conditions */
 .terms {
     display: flex; /*Aligns the checkbox and the label side by side*/
     align-items: center;/*Vertically centers the checkbox*/
-    font-size: 14px;/*Font size of the terms and conditions*/
+    font-size: 1rem;/*Font size of the terms and conditions*/
     color: #333;/*The colour of the text*/
 }
 
