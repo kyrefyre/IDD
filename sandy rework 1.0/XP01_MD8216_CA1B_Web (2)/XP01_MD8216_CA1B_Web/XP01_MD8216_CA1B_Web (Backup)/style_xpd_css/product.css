@@ -360,3 +360,17 @@ header div img {
     cursor: pointer;
     transition: al 0.8s ease;
   }
+
+.column.side {
+    width: 25%;
+}
+
+.column.middle {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
