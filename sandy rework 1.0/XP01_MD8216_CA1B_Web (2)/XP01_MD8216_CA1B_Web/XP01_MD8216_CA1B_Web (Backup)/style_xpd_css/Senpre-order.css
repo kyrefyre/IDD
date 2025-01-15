@@ -18,36 +18,49 @@ body {
 
 /*Top logo section*/
 .header {
-    display: flex ; /*Container to hold the Logo image*/
+    display: flex; /*Container to hold the Logo image*/
     align-items: center; /*Aligns the flex container to the center*/
     margin: auto; /*Margin for the flex container*/
-    padding: 1rem; /*Padding for the flex container*/
+    padding: 16px; /*Padding for the flex container*/
 }
 
 header div img {
     width: 160px; /*Logo image width*/
-    margin:auto; /*Margin within the flex box*/
+    margin: auto; /*Margin within the flex box*/
+}
+
+@media (max-width: 768px) {
+    .header {
+        position: fixed; /*Fixes the header to the top*/
+        top: 0; /*Ensures it sticks to the very top*/
+        width: 100%; /*Takes up the full horizontal space*/
+        z-index: 1000; /*Ensures it stays on top of other content*/
+        background-color: #836A60; /*Optional: Add background color for better visibility*/
+    }
+    header div img {
+        width: 120px; /*Adjust logo size for smaller screens*/
+    }
 }
 
 /* Navigation bar section*/
 #navbar {
-    padding: 2rem; /*Padding of the nav bar*/
+    padding: 16px; /*Padding of the nav bar*/
     position: sticky; /*For the nav bar to stick as the user scrolls*/
     top: 0; /*ensures bar sticks to the top of the users screen as they scroll*/
     z-index: 9999; /*This is to ensure nav bar stays on top of all content in page*/
 }
 .navbar {
     display: flex; /*Container to hold the elements in the nav bar*/
-    width: 25rem; /*Width of the container*/
-    padding: 1rem;/*Padding of the container*/
+    width: 540px; /*Width of the container*/
+    padding: 16px;/*Padding of the container*/
     margin: auto; /*Margin of the container*/
-    border-radius: 30rem; /*Radius of the nav bar (rounded corners*/
+    border-radius: 70px; /*Radius of the nav bar (rounded corners*/
     background-color: #836A60;/*Colour of the nav bar*/
 }
 .navbutton {
     font-family: "Satoshi", sans-serif; /*Font family of the buttons in the nav bar*/
     font-weight: medium; /*Font weight of the buttons in the nav bar*/
-    font-size: 1.5rem; /*Font size of the buttons in the nav bar*/
+    font-size: 20px; /*Font size of the buttons in the nav bar*/
     margin: auto; /*Margin between the words*/
     text-decoration: none; /*Gets rid of the default underline of the words*/
     color: #FFFFFF; /*Colour of the words in the nav bar*/
@@ -57,6 +70,25 @@ header div img {
     color: #DCC7B3; /*Colour of the words upon hover*/
     text-decoration: underline; /*Creates underline upon hovering on the word*/
     transition: 0.5s; /*Ensures the state change is smooth*/
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Change to vertical layout on smaller screens */
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove rounded corners */
+        justify-content: center; /* Center buttons */
+    }
+    .navbutton {
+        margin: 8px 0; /* Add margin between buttons */
+        text-align: center; /* Center align text */
+    }
+    #navbar {
+        position: fixed; /* Ensure navbar stays fixed at the top */
+        top: 60px; /* Stick below the logo */
+        width: 100%; /* Full width on smaller screens */
+        z-index: 9999; /* Ensure it stays on top of other content */
+    }
 }
 
 
