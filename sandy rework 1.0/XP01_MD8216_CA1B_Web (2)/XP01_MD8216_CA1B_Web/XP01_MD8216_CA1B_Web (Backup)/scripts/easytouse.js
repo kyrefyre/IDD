@@ -1,91 +1,87 @@
 import {
-    ViewerApp,
-    AssetManagerPlugin,
-    addBasePlugins,
-    VariationConfiguratorPlugin,
-    FrameFadePlugin,
-    LoadingScreenPlugin,
-    PickingPlugin,
-    TweakpaneUiPlugin,
-    MaterialConfiguratorPlugin,
-  //material - obudowa_przod_black_plastic001_0
-    // Import THREE.js internals
-    Color,
-      Texture,
-    Vector3,
-  } from 'webgi';
+  ViewerApp,
+  AssetManagerPlugin,
+  addBasePlugins,
+  PickingPlugin,
+  // Import THREE.js internals
+  Vector3,
+} from 'webgi';
 
-  async function setupViewer() {
-    const viewer = new ViewerApp({
-        canvas: document.getElementById('easytouse-canvas'),
-    });
-    await addBasePlugins(viewer);
+async function setupViewer() {
+  const viewer = new ViewerApp({
+    canvas: document.getElementById('easytouse-canvas'),
+  });
+  await addBasePlugins(viewer);
 
   const manager = await viewer.addPlugin(AssetManagerPlugin);
   await viewer.load("./assets/easy to use (1).glb");
+  var currentCameraTransform = viewer.scene.activeCamera.position;
+  var currentCameraTarget = viewer.scene.activeCamera.target;
+  var camTransform1 = new Vector3(-0.25, 2.26, 3.79);
+  var camTarget1 = new Vector3(-0.24, -0.03, 0.01);
+  var camTransform2 = new Vector3(-3.95, -0.05, 8.47);
+  var camTarget2 = new Vector3(0.16, -0.05, 0.24);
 
-  const options = viewer.scene.activeCamera.getCameraOptions();
-	options.fov = 15;
-	viewer.scene.activeCamera.setCameraOptions(options);
-    const controls = viewer.scene.activeCamera.controls;
-	controls.autoRotate = false;
-	controls.autoRotateSpeed = 5;
-	controls.enableDamping = true;
-	controls.rotateSpeed = 2.0;
-	controls.enableZoom = false;
-	controls.enablePan = false;
-	controls.minDistance = 3;
-	controls.maxDistance = 12;
+  // // Access the cameras in the loaded GLB model
+  // const cameras = [];
+  // viewer.scene.traverse((node) => {
+  //   if (node.isCamera) {
+  //     cameras.push(node);
+  //   }
+  // });
 
-    const picking = viewer.addPluginSync(PickingPlugin);
+  // console.log("Cameras found:", cameras.length); // Debug output
+
+  // Add button functionality to switch between camera views
+
+    document.getElementById('easytouse-button1').addEventListener('click', () => {
+      currentCameraTarget = camTarget1;
+      currentCameraTransform = camTransform1;
+      viewer.scene.activeCamera.position = currentCameraTransform;
+      viewer.scene.activeCamera.target = currentCameraTarget;
+      viewer.scene.setDirty(); // Mark scene as dirty to force update
+    });
+
+    document.getElementById('easytouse-button2').addEventListener('click', () => {
+      currentCameraTarget = camTarget2;
+      currentCameraTransform = camTransform2;
+      viewer.scene.activeCamera.position = currentCameraTransform;
+      viewer.scene.activeCamera.target = currentCameraTarget; 
+      viewer.scene.setDirty(); // Mark scene as dirty to force update
+    });
+ 
+
+  // Disable auto-rotate and any idle animation behavior
+  const controls = viewer.scene.activeCamera.controls;
+  controls.autoRotate = false; // Disable auto-rotation
+  controls.enableDamping = true;
+  controls.rotateSpeed = 2.0;
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.minDistance = 3;
+  controls.maxDistance = 12;
+
+  // Set up PickingPlugin for object interaction (you may still want to keep this)
+  const picking = viewer.addPluginSync(PickingPlugin);
   picking.hoverEnabled = true;
   picking.enableWidget = false;
-  console.log(picking.getSelectedObject);
-  // const ui = viewer.addPluginSync(new TweakpaneUiPlugin(true));
-  // ui.setupPluginUi(PickingPlugin);
+
   picking.addEventListener('hitObject', (e) => {
-      console.log('Hit object', e, e.intersects.selectedObject);
-      // set to null to prevent selection
-      // e.intersects.selectedObject = null
+    console.log('Hit object', e, e.intersects.selectedObject);
   });
+
   picking.addEventListener('selectedObjectChanged', (e) => {
     console.log('Selected Object Changed', e);
-});
+  });
 
-picking.addEventListener('hoverObjectChanged', (e) => {
+  picking.addEventListener('hoverObjectChanged', (e) => {
     console.log('Hover object changed', e);
-});
-
-// const drawer = manager.materials.findMaterialsByName('light_grey_plastic')[0]
-// 	console.log(drawer);
-
-// document.getElementById('color-Black')?.addEventListener('click', () => {
-//     changeColor(new Color(0x010101))
-//     console.log('color changed');
-//   })
-
-//   document.getElementById('color-Grey')?.addEventListener('click', () => {
-//     changeColor(new Color(0x8a8a8a))
-//   })
-
-//   document.getElementById('color-Brown')?.addEventListener('click', () => {
-//     changeColor(new Color(0x5a3220))
-// })
-//     function changeColor(colorToBeChanged) {
-//         drawer.color = colorToBeChanged;
-//         viewer.scene.setDirty();
-//       }
+  });
 }
 
 setupViewer();
 
-function animate() {
-  requestAnimationFrame(animate)
-  renderer.render(scene, camera)
-}
 
-animate();
-    
 //     var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
 //     var x = setInterval(function() {
 //         var now = new Date().getTime(); 

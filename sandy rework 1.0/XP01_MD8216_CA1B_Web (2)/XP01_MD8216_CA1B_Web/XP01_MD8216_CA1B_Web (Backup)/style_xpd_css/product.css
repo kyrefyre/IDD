@@ -376,27 +376,28 @@ header div img {
 }
 
 .text-column-left {
-    width: 60%;
-    position: left;
+    width: 70%;
+    /* position: left; */
 }
 
 .canvas-container-right {
-    width: 40%;
-    position: right;
+    width: 30%;
+    min-height: 100%;
+    /* position: right; */
 }
 
-.text-column-right {
-    width: 60%;
-    position: right;
+.text-column {
+    width: 70%;
+    /* position: right; */
 }
 
-.canvas-container-left {
-    width: 40%;
-    position: left;
+.canvas-container {
+    width: 30%;
+    /* position: left; */
 }
 
 @media screen and (max-width: 600px) {
-    .text-column-left, .canvas-container-right {
+    .text-column, .canvas-container {
         width: 100%;
     }
 }

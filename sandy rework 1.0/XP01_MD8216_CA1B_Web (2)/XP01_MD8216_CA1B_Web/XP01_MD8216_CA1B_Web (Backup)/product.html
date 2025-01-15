@@ -53,15 +53,15 @@
              <section class = feature id = "view1">
                 <div class = "row 2">
 
-                    <div class = "text-column-left">
+                    <div class = "text-column">
                         <div class = "feature-1">
                            <h2>Easy to use</h2> <!-- Our Header title for this section -->
                             <p>1. Our coffee machines gives you visual instructions through its digital touchscreen, only moving on when you click on the screen.<br> <br> 2. Our machine features a cute Ding sound, that can be changed based on your preference. This helps to indicate when your coffee is done so it not cold when you drink it..</p> <!-- Body text of information about Sen Coffee's Machines -->
                             <div class="btns">
-                                <div type = "button" class = "model-feature1">
+                                <div type = "button" class = "model-feature1" id = "easytouse-button1">
                                     <p>1</p>
                                 </div>
-                                <div type = "button" class = "model-feature2">
+                                <div type = "button" class = "model-feature2" id = "easytouse-button2">
                                     <p>2</p>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 
-                <div class = "canvas-container-right">
+                <div class = "canvas-container">
                     <div id = "feature1-container">
                         <canvas id = "easytouse-canvas"></canvas>
                         <script src="./scripts/easytouse.js" type="module"></script>
@@ -82,42 +82,43 @@
                     <script type = "module" src ="./scripts/main.js"></script> -->
              <section class ="feature">
                 <div class = "row3">
-                    <div class = "text-column-right">
+                    <div class = "canvas-container">
+                        <div id = "feature2-container">
+                            <canvas id = "allyourfavourites-canvas"></canvas>
+                            <script src = "./scripts/allyourfavourites.js" type = "module"></script>
+                            <!-- <img src="Images/Coffee machine render tap.png"> -->
+                        </div>
+                    </div>
+                    <div class = "text-column">
                         <div class = "feature-2">
                             <h2>All your favourites</h2> <!-- Our Header title for this section -->
-                            <p>1. With so many parts in our machine, we made sure components like the water reservoir, drip tray, and filter basket can be detached for effortless cleaning.<br> <br> 2. Our machine features drip free spouts, which this prevents coffee splashes and reduces the overall mess, which in turn also reduces the need for cleaning.</p> <!-- Body text of information about Sen Coffee's Machines -->
+                            <p>1. Wide compatibility that works with a variety of beans, grounds, or pods to ensure you can have any type of coffee you want.<br><br> 2. Personal Library that helps to register your past favorite brews and settings for a truly simple and tailored coffee experience.</p> <!-- Body text of information about Sen Coffee's Machines -->
                             <div class="btns">
-                                <div type="button" class="model-feature1">
+                                <div type="button" class="model-feature1" id = "allyourfavourites-button1">
                                    <p>1</p>
                                 </div>
-                                <div type="button" class="model-feature2">
+                                <div type="button" class="model-feature2" id = "allyourfavourites-button2">
                                    <p>2</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class = "canvas-container-left">
-                    <div id = "feature2-container">
-                        <canvas id = "allyourfavourites-canvas"></canvas>
-                        <script src = "./scripts/main.js" type = "module"></script>
-                        <!-- <img src="Images/Coffee machine render tap.png"> -->
-                    </div>
+                    
                 </div>    
             </section>
                     
             <section class="feature">
                 <div class="row3">
-                    <div class = "text-column-left">
+                    <div class = "text-column">
                         <div class="feature-3">
                             <h2>Easy to clean</h2> <!-- Our Header title for this section -->
-                            <p>1. Wide compatibility that works with a variety of beans, grounds, or pods to ensure you can have any type of coffee you want.<br><br> 2. Personal Library that helps to register your past favorite brews and settings for a truly simple and tailored coffee experience.</p> <!-- Body text of information about Sen Coffee's Machines -->
+                            <p>1. With so many parts in our machine, we made sure components like the water reservoir, drip tray, and filter basket can be detached for effortless cleaning.<br> <br> 2. Our machine features drip free spouts, which this prevents coffee splashes and reduces the overall mess, which in turn also reduces the need for cleaning.</p> <!-- Body text of information about Sen Coffee's Machines -->
+                            
                             <div class="btns">
-                                <div type="button" class="model-feature1">
+                                <div type="button" class="model-feature1" id = "easytoclean-button1">
                                     <p>1</p>
                                 </div>
-                                <div type="button" class="model-feature2">
+                                <div type="button" class="model-feature2" id = "easytoclean-button2">
                                     <p>2</p>
                                 </div>
                             </div>
@@ -125,10 +126,10 @@
                     </div>    
                 </div>
                 
-                <div class = "canvas-container-right">
+                <div class = "canvas-container">
                     <div id = "feature3-container">
                         <canvas id = "easytoclean-canvas"></canvas>
-                        <script src = "./scripts/main.js" type = "module"></script>
+                        <script src = "./scripts/easytoclean.js" type = "module"></script>
                         <!-- <img src="Images/Coffee machine render the frother.png"> -->
                     </div>
                 </div>
