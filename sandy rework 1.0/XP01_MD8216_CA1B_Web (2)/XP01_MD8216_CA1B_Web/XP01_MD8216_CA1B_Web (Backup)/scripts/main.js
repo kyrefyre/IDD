@@ -25,7 +25,7 @@ import {
   await viewer.load("./assets/coffee-machine-2.glb");
 
   const options = viewer.scene.activeCamera.getCameraOptions();
-	options.fov = 25;
+	options.fov = 15;
 	viewer.scene.activeCamera.setCameraOptions(options);
     const controls = viewer.scene.activeCamera.controls;
 	controls.autoRotate = false;
@@ -56,18 +56,19 @@ picking.addEventListener('hoverObjectChanged', (e) => {
     console.log('Hover object changed', e);
 });
 
-const drawer = manager.materials.findMaterialsByName('obudowa_przod_black_plastic001_0')[0]
-console.log(drawer);
+const drawer = manager.materials.findMaterialsByName('light_grey_plastic')[0]
+	console.log(drawer);
 
 document.getElementById('color-Black')?.addEventListener('click', () => {
     changeColor(new Color(0x010101))
+    console.log('color changed');
   })
 
   document.getElementById('color-Grey')?.addEventListener('click', () => {
     changeColor(new Color(0x8a8a8a))
   })
 
-  document.querySelector('color-btn')?.addEventListener('click', () => {
+  document.getElementById('color-Brown')?.addEventListener('click', () => {
     changeColor(new Color(0x5a3220))
 })
     function changeColor(colorToBeChanged) {

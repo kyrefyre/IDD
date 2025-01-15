@@ -22,7 +22,6 @@
         </section>
 
             <section id="HeroBanner">
-
                 <div class = "column side">
                     <div class = "row1">
                         <div class="product-name">
@@ -51,7 +50,7 @@
              </section>
 
              <section class=feature>
-                <div class="feature-text">
+                <div class="text-column-side">
                     <h2>Easy to use</h2> <!-- Our Header title for this section -->
                     <p>1. Our coffee machines gives you visual instructions through its digital touchscreen, only moving on when you click on the screen.<br> <br> 2. Our machine features a cute Ding sound, that can be changed based on your preference. This helps to indicate when your coffee is done so it not cold when you drink it..</p> <!-- Body text of information about Sen Coffee's Machines -->
                     <div class="btns">
@@ -63,12 +62,14 @@
                         </div>
                     </div>
                 </div>
-                        <div class="model">
-                            <img src="Images/Coffee machine render digital screen.png">
-                        </div>
+                    <div id="canvas-container-right">
+                        <canvas id = "easytouse-canvas"></canvas>
+                        <script src="./scripts/main.js" type="module"></script>
+                        <img src="Images/Coffee machine render digital screen.png">
+                    </div>
              </section>
-                    <canvas class = "webgi"></canvas>
-                    <script type = "module" src ="./scripts/main.js"></script>
+                    <!-- <canvas class = "webgi"></canvas>
+                    <script type = "module" src ="./scripts/main.js"></script> -->
              <section class="feature">
                         <div class="model">
                             <img src="Images/Coffee machine render tap.png">
