@@ -134,8 +134,9 @@ header div img {
 
 
 .color-buttons {
-    transform: translateY(-50%);/*shifts the element upwards so that its vertical center aligns with the center of the container.*/
-    padding-right: 64px; /*Spacing of the container holding the buttons from the right side of the page*/
+    transform: translateX(50%); /*shifts the element upwards so that its vertical center aligns with the center of the container.*/
+    /* transform: translateX(-200%); */
+    padding-right: 5%; /*Spacing of the container holding the buttons from the right side of the page*/
     display: flex; /*Container to hold the colour buttons*/
     flex-direction: row; /*The layout of the buttons*/
     gap: 15px;/*The gap between each of the buttons*/
@@ -375,24 +376,27 @@ header div img {
     }
 }
 
-.text-column-left {
-    width: 70%;
+.small-text-column {
+    width: 35%;
     /* position: left; */
 }
 
-.canvas-container-right {
-    width: 30%;
+.canvas-column {
+    width: 65%;
     min-height: 100%;
     /* position: right; */
 }
 
 .text-column {
-    width: 75%;
+    width: 70%;
     /* position: right; */
 }
 
 .canvas-container {
-    width: 25%;
+    width: 30%;
+    padding-right: 2%;
+    padding-left: 2%;
+    scale: 130%;
     /* position: left; */
 }
 
@@ -402,7 +406,12 @@ header div img {
     }
 }
 @media screen and (max-width: 600px) {
-    .text-column-right, .canvas-container-left {
+    .small-text-column, .canvas-column {
         width: 100%;
     }
+}
+.Buttons-Row {
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
