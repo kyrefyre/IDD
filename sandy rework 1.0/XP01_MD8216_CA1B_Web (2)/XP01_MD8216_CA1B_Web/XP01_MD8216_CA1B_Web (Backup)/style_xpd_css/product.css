@@ -1,5 +1,5 @@
 *{
-margin: 0px;
+margin: right = 20px;
 border: none;
 padding: 0px;
 } /* this is for browser reset*/
@@ -170,7 +170,7 @@ header div img {
 
 /*feature Section*/
 .feature {
-    max-width: 1280px; /* Set max width of content inside*/
+    max-width: 1000px; /* Set max width of content inside*/
     max-height: 400px; /* Set max height of content inside*/
     margin: auto; /*centralising content*/
     margin-top: 64px; /*upper margin of feature sections*/
@@ -387,12 +387,12 @@ header div img {
 }
 
 .text-column {
-    width: 70%;
+    width: 75%;
     /* position: right; */
 }
 
 .canvas-container {
-    width: 30%;
+    width: 25%;
     /* position: left; */
 }
 
